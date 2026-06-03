@@ -14,20 +14,25 @@ The array will contain all positive integers.
 
 
 
-const numbers = [10, 15, 5, 6, 12, 32, 4];
+const numbers = [52,65,81,25,34,56,68,98,85,105];
 let len = numbers.length;
-let largest = 0;
-let second_largest= 0;
-function second_large(){
-    for (let i=0; i<len; i++){
-        if(numbers[i] > largest) {
-            second_largest = largest;
-            largest = numbers[i];
+let big_no = 0;
+let second_big_no = 0;
+
+function findNo() {
+    for (let i=0 ; i<len ; i++){
+        if (numbers[i] > big_no){
+            second_big_no = big_no;
+            big_no = numbers[i];
         }
-       else if(numbers[i] > second_largest){
-            second_largest = numbers[i];
+        else if (numbers[i] > second_big_no){
+            second_big_no  = numbers[i];
+        }
+        else {
+            second_big_no = numbers[i];
        }
     }
-    return second_largest;
+    return second_big_no ;
 }
-console.log("Second Largest Number is :" + " " + second_large());
+
+console.log ("Second Largest Number is :" + " " + findNo())
