@@ -28,9 +28,6 @@ function findNo() {
         else if (numbers[i] > second_big_no){
             second_big_no  = numbers[i];
         }
-        else {
-            second_big_no = numbers[i];
-       }
     }
     return second_big_no ;
 }
